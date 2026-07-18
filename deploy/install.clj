@@ -14,9 +14,9 @@
          '[clojure.string :as str])
 
 (def label "com.etzhayyim.iriai.heartbeat")
-;; this file is 20-actors/iriai/deploy/install.clj → repo root is 3 parents up
-(def repo (str (fs/absolutize (fs/parent (fs/parent (fs/parent (fs/parent *file*)))))))
-(def template (str repo "/20-actors/iriai/deploy/" label ".plist.template"))
+;; this file is deploy/install.clj; repository root is its grandparent.
+(def repo (str (fs/parent (fs/parent (fs/absolutize *file*)))))
+(def template (str repo "/deploy/" label ".plist.template"))
 (def agents-dir (str (System/getProperty "user.home") "/Library/LaunchAgents"))
 (def plist-out (str agents-dir "/" label ".plist"))
 (def log-dir (str (System/getProperty "user.home") "/Library/Logs/etzhayyim"))
@@ -57,5 +57,5 @@
   "install"   (install!)
   "uninstall" (uninstall!)
   "status"    (status!)
-  (do (println "usage: bb 20-actors/iriai/deploy/install.clj [install|uninstall|status]")
+  (do (println "usage: bb deploy/install.clj [install|uninstall|status]")
       (System/exit 1)))

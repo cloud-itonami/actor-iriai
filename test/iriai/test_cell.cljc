@@ -1,6 +1,6 @@
 #!/usr/bin/env bb
 ;; iriai 入会 — fleet cell tests.
-;; Run:  bb --classpath 20-actors 20-actors/iriai/test_cell.cljc
+;; Run: clojure -M -m iriai.test-runner
 (ns iriai.test-cell
   (:require [iriai.cell :as cell]
             [iriai.methods.kotoba :as k]
