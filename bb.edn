@@ -1,0 +1,1 @@
+{:tasks {test (shell "clojure -M -m iriai.test-runner") audit (load-file "scripts/audit.clj")}}
