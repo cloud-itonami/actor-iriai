@@ -1,0 +1,5 @@
+{:repo/id "cloud-itonami/actor-iriai"
+ :repo/aliases ["etzhayyim/com-etzhayyim-iriai"]
+ :repo/role :governed-executable-actor
+ :repo/execution :resident
+ :repo/boundary "Lifeline-commons assessment and proposal only; producer actors actuate and Tamaki owns artificial-organism evolution."}

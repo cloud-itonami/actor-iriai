@@ -1,5 +1,9 @@
 # iriai 入会 — global lifeline-commons (電気 / 水道 / ガス / 通信)
 
+Canonical repository: `cloud-itonami/actor-iriai`. This governed, resident
+commons-assessment actor belongs to the Itonami public-operations plane. It
+does not own the Tamaki artificial-organism loop and never actuates a lifeline.
+
 EDN is canonical under `manifest.edn` and `data/`; JSON mirrors are isolated in `wire/`.
 Runtime/tests are Clojure/CLJC. Go/TinyGo, Python, and shell implementations are deprecated.
 Run `clojure -M -m iriai.test-runner` and `bb scripts/audit.clj`.

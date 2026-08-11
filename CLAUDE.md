@@ -1,4 +1,7 @@
-# 20-actors/iriai — CLAUDE.md
+# cloud-itonami/actor-iriai — CLAUDE.md
+
+Canonical repository: `https://github.com/cloud-itonami/actor-iriai`.
+The former `etzhayyim/com-etzhayyim-iriai` path is a compatibility redirect.
 
 ## What this is
 
