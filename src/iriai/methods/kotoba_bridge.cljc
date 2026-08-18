@@ -163,8 +163,8 @@
 #?(:clj
    (defn default-http-post [url body-map headers timeout-s]
      (let [post (requiring-resolve 'babashka.http-client/post)
-           generate (requiring-resolve 'cheshire.core/generate-string)
-           parse (requiring-resolve 'cheshire.core/parse-string)
+           generate (requiring-resolve 'json.compat/generate-string)
+           parse (requiring-resolve 'json.compat/parse-string)
            resp (post (str url) {:headers headers :body (generate body-map)
                                  :timeout (long (* 1000 (double timeout-s))) :throw false})
            status (:status resp)]
