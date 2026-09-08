@@ -4,7 +4,7 @@
 (ns iriai.methods.test-forecast
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.forecast :as fc]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (def seed-path "data/seed/seed.edn")

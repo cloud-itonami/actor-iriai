@@ -3,7 +3,7 @@
 ;; Run:  bb --classpath 20-actors src/iriai/methods/test_identity.cljc
 (ns iriai.methods.test-identity
   (:require [iriai.methods.identity :as id]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (deftest did-key-encodes-ed25519-multicodec

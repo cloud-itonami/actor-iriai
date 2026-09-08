@@ -28,7 +28,7 @@
 
   SIM/assessment-only is unaffected: the bridge ships the commons MAP/plan/forecast datoms; it never
   actuates a lifeline (G5) and never bills a consumer (G2). Live push is the documented G7 operator step."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [iriai.methods.kotoba :as k]))
 
 (def allowed-kotoba-hosts
@@ -93,7 +93,7 @@
 
 (defn- url-parts [endpoint]
   (if-let [[_ scheme netloc] (re-find #"^([A-Za-z][A-Za-z0-9+.\-]*)://([^/?#]*)" (str endpoint))]
-    {:scheme (str/lower-case scheme) :netloc netloc}
+    {:scheme (str/lower scheme) :netloc netloc}
     {:scheme nil :netloc nil}))
 
 (defn assert-kotoba
@@ -102,7 +102,7 @@
   [endpoint]
   (let [{:keys [scheme netloc]} (url-parts endpoint)]
     (when-not (and (= "http" scheme)
-                   (contains? allowed-kotoba-hosts (some-> netloc str/lower-case)))
+                   (contains? allowed-kotoba-hosts (some-> netloc str/lower)))
       (throw (kotoba-boundary-violation
               (str "kotoba endpoint " (pr-str endpoint) " is outside the fleet allowlist "
                    (vec (sort allowed-kotoba-hosts)))

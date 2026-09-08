@@ -24,7 +24,7 @@
   G6  no-server-key                : server-held-key false; member-CACAO attribution; local-only heartbeat.
   G7  kotoba-eavt-native           : datoms flagged :iriai/derived + :iriai/sourcing.
   G8  synthetic-seed               : R0 seed :synthetic; real region/utility data = operator/Council step."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def forbidden-attrs
   "Attributes that must NEVER appear in any emitted datom — the structural negative

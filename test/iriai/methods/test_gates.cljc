@@ -2,7 +2,7 @@
 ;; iriai 入会 — constitutional gate tests (the charter inversions, structurally enforced).
 ;; Run:  bb --classpath 20-actors src/iriai/methods/test_gates.cljc
 (ns iriai.methods.test-gates
-  (:require [iriai.methods.iriai-edn :as ie]
+  (:require [kotoba.lang.text] [iriai.methods.iriai-edn :as ie]
             [iriai.methods.infra :as infra]
             [iriai.methods.fund :as fund]
             [iriai.methods.manage :as manage]
@@ -57,10 +57,10 @@
 ;; ── the gate list itself covers each charter inversion ─────────────────────────
 (deftest forbidden-list-covers-the-inversions
   (let [joined (apply str g/forbidden-attrs)]
-    (is (clojure.string/includes? joined ":iriai/shutoff")            "G1 never-withheld")
-    (is (clojure.string/includes? joined ":iriai.fund/tariff")        "G2 commons-not-market")
-    (is (clojure.string/includes? joined ":iriai/fund")               "G3 steward-not-sovereign")
-    (is (clojure.string/includes? joined ":iriai/actuate")            "G5 never-acts")))
+    (is (kotoba.lang.text/includes? joined ":iriai/shutoff")            "G1 never-withheld")
+    (is (kotoba.lang.text/includes? joined ":iriai.fund/tariff")        "G2 commons-not-market")
+    (is (kotoba.lang.text/includes? joined ":iriai/fund")               "G3 steward-not-sovereign")
+    (is (kotoba.lang.text/includes? joined ":iriai/actuate")            "G5 never-acts")))
 
 #?(:clj
    (when (= *file* (System/getProperty "babashka.file"))

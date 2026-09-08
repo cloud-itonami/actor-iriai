@@ -6,7 +6,7 @@
             [iriai.methods.fund :as fund]
             [iriai.methods.manage :as manage]
             [iriai.methods.gates :as g]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (def seed-path "data/seed/seed.edn")

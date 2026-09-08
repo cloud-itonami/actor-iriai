@@ -4,7 +4,7 @@
 (ns iriai.methods.test-infra
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.infra :as infra]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (def seed-path "data/seed/seed.edn")

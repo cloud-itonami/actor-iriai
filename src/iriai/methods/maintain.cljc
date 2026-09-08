@@ -31,7 +31,7 @@
   The SAFETY-FLOOR is structural + test-enforced: NO :unsafe asset can return :ok /
   :inspect / :preventive-service / :refurbish (mirrors kafun's refuse-precedes-routing,
   mizuho's chlorination clamp, kamado's purge-to-entry gate)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [iriai.methods.twin :as twin]))
 
 (def ^:private renew-condition 0.25)

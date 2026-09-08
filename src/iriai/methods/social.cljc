@@ -25,7 +25,7 @@
   A live post needs Council Lv6+ + operator + a member/actor signature (build-live raises).
   Pure fns; deterministic; string-keyed post records (house style). Stdlib only — the
   growth (live signing/broadcast) happens actor-side on the mesh, not here."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [iriai.methods.infra :as infra]
             [iriai.methods.fund :as fund]
             [iriai.methods.maintain :as maintain]))
@@ -44,8 +44,8 @@
   map narrates aggregate reach, never a withholding or a person. The fixed DISCLAIMER (which
   itself says 'NOT a shut-off list') is controlled boilerplate and exempt from the scan."
   [body]
-  (let [lc (-> (str body) (str/replace DISCLAIMER "") str/lower-case)]
-    (when-let [bad (some (fn [t] (when (str/includes? lc (str/lower-case t)) t)) forbidden-tokens)]
+  (let [lc (-> (str body) (str/replace DISCLAIMER "") str/lower)]
+    (when-let [bad (some (fn [t] (when (str/includes? lc (str/lower t)) t)) forbidden-tokens)]
       (throw (ex-info (str "G1 violation: a lifeline commons post is a COVERAGE MAP, never a shut-off / "
                            "per-person record — found forbidden token " (pr-str bad))
                       {:gate "G1" :token bad}))))
