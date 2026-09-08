@@ -16,7 +16,7 @@
   appends to a local file. Verdicts are :synthetic at R0; the ledger is auditable
   (a record of commons coverage/funding/governance DECISIONS, NEVER a shut-off list —
   the data is provision/resilience decisions, not which households to disconnect)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [clojure.java.io :as io])))
 
 (defn add [entity attr value] [":db/add" entity attr value])

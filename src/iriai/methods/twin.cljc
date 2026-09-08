@@ -24,7 +24,7 @@
     :gas       wall-thickness corrosion w(t)=w0−cr·t → leak-probability (safety floor)
     :telecom   fibre attenuation creep α(t)=α0+β·t → link-budget margin
     :road      pavement PCI(t)=PCI0−a·t^b deterioration (+ bridge load-rating)"
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── disclosed model constants ──────────────────────────────────────────────────
 (def ^:private dtheta-or 55.0)   ; rated top-oil rise over ambient (°C), IEEE C57.91

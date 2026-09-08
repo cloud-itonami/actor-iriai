@@ -15,7 +15,7 @@
   (kizashi sensing, R1) refines it. Forecasts are HORIZON-BOUNDED (no false precision past
   the horizon → :beyond-horizon), and `:model-based true`. SIMULATION ONLY (G5) — a forecast
   never actuates; it informs the maintenance plan + the funding cadence."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [iriai.methods.twin :as twin]
             [iriai.methods.maintain :as maintain]))
 

@@ -24,7 +24,7 @@
 
   A lifeline is a COMMONS (入会権): governed by the members who hold it, not by a sovereign
   operator. There is no unilateral :iriai/decide / :iriai/dispatch (G3 steward-not-sovereign)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [iriai.methods.fund :as fund]))
 
 (def ^:private force-lifelines

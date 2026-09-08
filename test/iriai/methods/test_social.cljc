@@ -8,7 +8,7 @@
             [iriai.methods.maintain :as maintain]
             [iriai.methods.social :as social]
             [iriai.cells.social-post.state-machine :as sm]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (def seed-path "data/seed/seed.edn")

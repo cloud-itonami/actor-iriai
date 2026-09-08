@@ -28,7 +28,7 @@
   ONLY (equity/debt/revenue-share/subscription/tariff are UNREPRESENTABLE). cash-to-
   consumer is the const 0. G3 — STEWARD, not sovereign: there is NO :fund route; every
   proposal is advisory:true / binds-fund:false, decided by 1 SBT = 1 vote."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [iriai.methods.infra :as infra]))
 
 ;; ── disclosed reference (market-equivalent imputed value; aggregate, transparency-only) ──

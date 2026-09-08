@@ -19,7 +19,7 @@
                 Council Lv6+ + operator + a member/actor signature, §1.12 / G6).
 
   Self-contained. Stdlib only. Deterministic — the seed grows on the mesh, not here."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def disclaimer
   "【コモンズ被覆マップ — NOT a utility, NOT a shut-off list / 非断定】")
@@ -59,12 +59,12 @@
                    "server_held_key"  (boolean (get state "server_held_key" (get cs0 "server_held_key"))))
         refuse (fn [msg]
                  {"cell_state" (assoc cs "refusal" msg "phase" phase-refused)})
-        body-lc (str/lower-case (str (get cs "subject") " " (get cs "body")))]
+        body-lc (str/lower (str (get cs "subject") " " (get cs "body")))]
     (cond
       (< (count (get cs "sources")) 2)
       (refuse "sources: a post needs ≥2 provenance citations (ADR + committed ledger/DID)")
 
-      (some (fn [t] (str/includes? body-lc (str/lower-case t))) forbidden-tokens)
+      (some (fn [t] (str/includes? body-lc (str/lower t))) forbidden-tokens)
       (refuse "G1: a commons coverage map is never a shut-off / per-person record")
 
       (get cs "server_held_key")

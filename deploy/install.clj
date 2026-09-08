@@ -11,7 +11,7 @@
 ;; template are committed. No-server-key: the cell depends on the LOCAL seed + bb only.
 (require '[babashka.fs :as fs]
          '[babashka.process :as p]
-         '[clojure.string :as str])
+         '[kotoba.lang.text :as str])
 
 (def label "com.etzhayyim.iriai.heartbeat")
 ;; this file is deploy/install.clj; repository root is its grandparent.

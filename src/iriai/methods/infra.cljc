@@ -29,7 +29,7 @@
   or activates a link (G5). Live actuation is the producer actor's + operator/Council step.
   There is NO :iriai/shutoff / :iriai/disconnect / :iriai/actuate attribute (G1/G5): a
   lifeline is a COMMONS right of use, never withheld as leverage."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── disclosed constants (life-first essentiality; aggregate vulnerability mix) ──
 (def essentiality

@@ -2,7 +2,7 @@
 ;; iriai 入会 — commons-ledger (content-addressed commit-DAG) tests.
 ;; Run:  bb --classpath 20-actors src/iriai/methods/test_kotoba.cljc
 (ns iriai.methods.test-kotoba
-  (:require [iriai.methods.kotoba :as k]
+  (:require [kotoba.lang.text] [iriai.methods.kotoba :as k]
             [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]))
 
@@ -17,7 +17,7 @@
     (is (= (k/tx-cid ds "") (k/tx-cid ds "")) "same datoms + prev → same CID")
     (is (not= (k/tx-cid ds "") (k/tx-cid ds "prev")) "prev-cid changes the CID (chaining)")
     (is (not= (k/tx-cid ds "") (k/tx-cid [(d "e1" ":a/x" 2)] "")) "different datoms → different CID")
-    (is (clojure.string/starts-with? (k/tx-cid ds "") "b"))))
+    (is (kotoba.lang.text/starts-with? (k/tx-cid ds "") "b"))))
 
 ;; ── append → read-log → verify-chain is tamper-evident ─────────────────────────
 (deftest append-read-verify-chain

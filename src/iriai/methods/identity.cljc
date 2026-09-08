@@ -23,7 +23,7 @@
   Pure stdlib (java.security Ed25519 + inlined base58btc); deterministic verify; no network.
   Mirrors tsubasa.methods.identity / kaname's self-key (base58btc inlined here so identity is
   dependency-free + portable to the kototama actor-runtime subset)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [babashka.process :as p])))
 
 ;; ── base58btc (Bitcoin alphabet) — for did:key multibase 'z' ──────────────────
