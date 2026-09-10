@@ -24,7 +24,7 @@
   Mirrors tsubasa.methods.identity / kaname's self-key (base58btc inlined here so identity is
   dependency-free + portable to the kototama actor-runtime subset)."
   (:require [kotoba.lang.text :as str]
-            #?(:clj [babashka.process :as p])))
+            [kotoba.lang.process :as proc]))
 
 ;; ── base58btc (Bitcoin alphabet) — for did:key multibase 'z' ──────────────────
 (def ^:private b58-alphabet "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz")
@@ -112,13 +112,29 @@
        "OPERATOR helper: seal the actor's private seed into the macOS Keychain so it is
        present-only (the runtime reads it to sign; never committed/logged). One operator step;
        the actor calls `gen-keypair` once at provisioning. Shells to the system `security`
-       binary via babashka.process (allowed — invoking an installed tool).
-       (1Password mirror: `op item create … etzhayyim-iriai-did`.)"
+       binary via kotoba.lang.process/exec — an exec-array, never a shell, so the
+       base64 seed cannot round-trip through one.
+       (1Password mirror: `op item create … etzhayyim-iriai-did`.)
+
+       Returns `:sealed` ONLY on exit 0. This check is not decoration: the
+       previous implementation called `babashka.process/shell`, which THROWS on
+       a non-zero exit, so a failed seal could never reach the `:sealed` at the
+       end of the body. `kotoba.lang.process/exec` fails closed instead --
+       `{:status N}`, no throw -- and dropping its result would have turned a
+       failed seal of a PRIVATE KEY SEED into a reported success. Measured
+       2026-09-10: `(p/shell \"false\")` throws, `(exec [\"false\"])` returns
+       `{:status 1}`."
        [^bytes seed32]
-       (let [b64 (.encodeToString (java.util.Base64/getEncoder) seed32)]
-         (p/shell "security" "add-generic-password" "-U"
-                  "-s" keychain-service "-a" keychain-account "-w" b64)
-         :sealed))))
+       (let [b64 (.encodeToString (java.util.Base64/getEncoder) seed32)
+             r   (proc/exec ["security" "add-generic-password" "-U"
+                             "-s" keychain-service "-a" keychain-account "-w" b64]
+                            #{"security"})]
+         (if (zero? (:status r))
+           :sealed
+           (throw (ex-info "iriai: sealing the actor seed into the Keychain failed"
+                           {:type :iriai/seal-failed
+                            :status (:status r)
+                            :stderr (:stderr r)})))))))
 
 ;; ── present-only attestation helper (no key needed to VERIFY) ─────────────────
 (defn attest-did-doc
