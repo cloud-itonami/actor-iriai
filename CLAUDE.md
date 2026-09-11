@@ -110,15 +110,15 @@ run_tests.clj            bb-native runner (no shell, ADR-2606072802)
 ## Run
 
 ```bash
-clojure -M -m iriai.test-runner                                  # 13 suites (79 tests / 512 assert)
-bb --classpath 20-actors src/iriai/methods/infra.cljc       # coverage + resilience map
-bb --classpath 20-actors src/iriai/methods/fund.cljc        # §1.16 in-kind funding plan
-bb --classpath 20-actors src/iriai/methods/manage.cljc      # 1 SBT=1 vote governance ledger
-bb --classpath 20-actors src/iriai/methods/twin.cljc        # physical-simulation asset condition
-bb --classpath 20-actors src/iriai/methods/maintain.cljc    # operations/maintenance plan
-bb --classpath 20-actors src/iriai/methods/forecast.cljc    # predictive-maintenance schedule
-bb --classpath 20-actors src/iriai/methods/autorun.cljc     # heartbeat → append (all 6 layers)
-bb --classpath 20-actors src/iriai/methods/autorun.cljc <seed> <log> --bridge  # + push to live kotoba :8077 (dry-run unless IRIAI_KOTOBA_LIVE=1)
+kbb -M -m iriai.test-runner                                  # 13 suites (79 tests / 512 assert)
+kbb --classpath 20-actors src/iriai/methods/infra.cljc       # coverage + resilience map
+kbb --classpath 20-actors src/iriai/methods/fund.cljc        # §1.16 in-kind funding plan
+kbb --classpath 20-actors src/iriai/methods/manage.cljc      # 1 SBT=1 vote governance ledger
+kbb --classpath 20-actors src/iriai/methods/twin.cljc        # physical-simulation asset condition
+kbb --classpath 20-actors src/iriai/methods/maintain.cljc    # operations/maintenance plan
+kbb --classpath 20-actors src/iriai/methods/forecast.cljc    # predictive-maintenance schedule
+kbb --classpath 20-actors src/iriai/methods/autorun.cljc     # heartbeat → append (all 6 layers)
+kbb --classpath 20-actors src/iriai/methods/autorun.cljc <seed> <log> --bridge  # + push to live kotoba :8077 (dry-run unless IRIAI_KOTOBA_LIVE=1)
 ```
 
 ## Live-engine bridge (ADR-2606280900, ibuki-R3/kaname pattern)
@@ -163,7 +163,7 @@ portable to the kototama actor-runtime subset). `build-live` social broadcast st
 `IriaiCommonsHeartbeatCell` is registered in `50-infra/cluster/murakumo/cell-runner/cells.edn`
 (node **judah**, cron **44 * * * ***, healthz **13093**) and runs one deterministic,
 idempotent-by-content beat per fire (infra+fund+manage+twin+maintain → local commons ledger).
-Local LaunchAgent residency: `bb 20-actors/iriai/deploy/install.clj install` (hourly :44).
+Local LaunchAgent residency: `kbb 20-actors/iriai/deploy/install.cljk install` (hourly :44).
 No-server-key, no external I/O; Murakumo digest + live-engine bridge + crew dispatch stay
 operator/Council-gated.
 

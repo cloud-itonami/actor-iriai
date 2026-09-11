@@ -19,9 +19,9 @@ Residence is a launchd LaunchAgent (OS config, not a bash loop). Generated plist
 **machine-local** (gitignored); only `install.clj` + the `.plist.template` are committed.
 
 ```bash
-bb 20-actors/iriai/deploy/install.clj install     # render plist + load (hourly at :44)
-bb 20-actors/iriai/deploy/install.clj status      # launchctl state
-bb 20-actors/iriai/deploy/install.clj uninstall   # unload + remove
+kbb 20-actors/iriai/deploy/install.cljk install     # render plist + load (hourly at :44)
+kbb 20-actors/iriai/deploy/install.cljk status      # launchctl state
+kbb 20-actors/iriai/deploy/install.cljk uninstall   # unload + remove
 ```
 
 `RunAtLoad` fires one beat immediately; `StartCalendarInterval` minute 44 repeats hourly.
@@ -35,4 +35,4 @@ bb 20-actors/iriai/deploy/install.clj uninstall   # unload + remove
   Murakumo-narrated digest + the live kotoba-engine bridge (ibuki-R3 pattern) + actual crew
   dispatch stay operator/Council-gated (a later R-cycle).
 
-`bb src/iriai/cell.cljc` runs one beat directly (what the LaunchAgent invokes).
+`kbb src/iriai/cell.cljk` runs one beat directly (what the LaunchAgent invokes).

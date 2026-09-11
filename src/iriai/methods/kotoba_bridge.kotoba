@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — push the local commons commit-DAG into the LIVE kotoba engine.
 (ns iriai.methods.kotoba-bridge
   "kotoba_bridge.cljc — iriai 入会 LIVE-engine bridge (ADR-2606280900, on ADR-2605262130 +

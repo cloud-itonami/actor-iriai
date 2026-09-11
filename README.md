@@ -6,7 +6,7 @@ does not own the Tamaki artificial-organism loop and never actuates a lifeline.
 
 EDN is canonical under `manifest.edn` and `data/`; JSON mirrors are isolated in `wire/`.
 Runtime/tests are Clojure/CLJC. Go/TinyGo, Python, and shell implementations are deprecated.
-Run `clojure -M -m iriai.test-runner` and `bb scripts/audit.clj`.
+Run `kbb -M -m iriai.test-runner` and `kbb scripts/audit.cljk`.
 
 The non-profit operator of the four lifelines (ライフライン) **as one commons**. 入会 (iriai) =
 the traditional Japanese commons — collectively-held rights of use over a shared resource. The
@@ -46,13 +46,13 @@ attribute to express them, proven by `gates/forbidden-absent?` over the whole da
 ## Run
 
 ```bash
-clojure -M -m iriai.test-runner                              # all suites
-bb --classpath 20-actors src/iriai/methods/infra.cljc   # coverage + resilience map
-bb --classpath 20-actors src/iriai/methods/fund.cljc    # §1.16 in-kind funding plan
-bb --classpath 20-actors src/iriai/methods/manage.cljc  # 1 SBT=1 vote governance ledger
-bb --classpath 20-actors src/iriai/methods/twin.cljc    # physical-simulation asset condition
-bb --classpath 20-actors src/iriai/methods/maintain.cljc # operations/maintenance plan
-bb --classpath 20-actors src/iriai/methods/autorun.cljc # heartbeat → commons ledger (5 layers)
+kbb -M -m iriai.test-runner                              # all suites
+kbb --classpath 20-actors src/iriai/methods/infra.cljc   # coverage + resilience map
+kbb --classpath 20-actors src/iriai/methods/fund.cljc    # §1.16 in-kind funding plan
+kbb --classpath 20-actors src/iriai/methods/manage.cljc  # 1 SBT=1 vote governance ledger
+kbb --classpath 20-actors src/iriai/methods/twin.cljc    # physical-simulation asset condition
+kbb --classpath 20-actors src/iriai/methods/maintain.cljc # operations/maintenance plan
+kbb --classpath 20-actors src/iriai/methods/autorun.cljc # heartbeat → commons ledger (5 layers)
 ```
 
 Apache 2.0 + etzhayyim Charter Compliance Rider v3.5.

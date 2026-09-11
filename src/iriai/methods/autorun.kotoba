@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — autonomous heartbeat: assess infra+fund+manage → append to the commons ledger.
 (ns iriai.methods.autorun
   "autorun.cljc — iriai 入会 deterministic heartbeat (ADR-2606272200).

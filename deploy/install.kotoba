@@ -1,9 +1,9 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — heartbeat LaunchAgent installer (bb-native, no shell). ADR-2606280900.
 ;;
-;;   bb 20-actors/iriai/deploy/install.clj install     ; render plist + load LaunchAgent
-;;   bb 20-actors/iriai/deploy/install.clj uninstall   ; unload + remove
-;;   bb 20-actors/iriai/deploy/install.clj status       ; show launchctl state + last beat
+;;   kbb 20-actors/iriai/deploy/install.cljk install     ; render plist + load LaunchAgent
+;;   kbb 20-actors/iriai/deploy/install.cljk uninstall   ; unload + remove
+;;   kbb 20-actors/iriai/deploy/install.cljk status       ; show launchctl state + last beat
 ;;
 ;; Per the repo rule (root CLAUDE.md §"Operational code = clj/bb"): residence is a launchd
 ;; LaunchAgent (OS config), invoking the `bb` cell task hourly at :44 — NOT a nohup bash loop.
@@ -57,5 +57,5 @@
   "install"   (install!)
   "uninstall" (uninstall!)
   "status"    (status!)
-  (do (println "usage: bb deploy/install.clj [install|uninstall|status]")
+  (do (println "usage: kbb deploy/install.cljk [install|uninstall|status]")
       (System/exit 1)))

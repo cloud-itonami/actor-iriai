@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — operations/maintenance LIFECYCLE gate (clj-native, pure stdlib).
 (ns iriai.methods.maintain
   "iriai 入会 — the operations / maintenance (運用メンテナンス) LIFECYCLE (ADR-2606280900).

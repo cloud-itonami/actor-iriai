@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — heartbeat tests (deterministic, idempotent-by-content, resume-safe).
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_autorun.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_autorun.cljc
 (ns iriai.methods.test-autorun
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.autorun :as autorun]

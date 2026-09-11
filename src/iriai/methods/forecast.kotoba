@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — predictive-maintenance FORECAST (twin run-ahead), clj-native.
 (ns iriai.methods.forecast
   "iriai 入会 — predictive maintenance (ADR-2606280900, the mitooshi 見通し discipline).

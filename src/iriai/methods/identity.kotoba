@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — actor self-certifying did:key identity (self-key autonomy). ADR-2606280900.
 (ns iriai.methods.identity
   "identity.cljc — iriai 入会 self-certifying `did:key` (Ed25519), present-only.

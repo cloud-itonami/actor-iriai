@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — fleet cell tests.
-;; Run: clojure -M -m iriai.test-runner
+;; Run: kbb -M -m iriai.test-runner
 (ns iriai.test-cell
   (:require [iriai.cell :as cell]
             [iriai.methods.kotoba :as k]

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — commons-ledger kotoba Datom-log writer (content-addressed).
 (ns iriai.methods.kotoba
   "kotoba.cljc — iriai 入会 append-only COMMONS LEDGER writer (ADR-2606272200, on
