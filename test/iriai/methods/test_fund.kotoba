@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — funding (資金) model tests (incl. the cash≡0 / give-only / steward invariants).
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_fund.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_fund.cljc
 (ns iriai.methods.test-fund
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.fund :as fund]

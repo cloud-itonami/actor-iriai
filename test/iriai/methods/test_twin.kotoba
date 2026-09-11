@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — physical-simulation twin tests (real degradation physics, bounded, monotone).
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_twin.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_twin.cljc
 (ns iriai.methods.test-twin
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.twin :as twin]

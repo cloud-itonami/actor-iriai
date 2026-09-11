@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — maintenance-lifecycle tests (incl. the SAFETY-FLOOR invariant).
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_maintain.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_maintain.cljc
 (ns iriai.methods.test-maintain
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.twin :as twin]

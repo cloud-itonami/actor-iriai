@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — constitutional gate assertions (clj-native, pure stdlib).
 (ns iriai.methods.gates
   "iriai 入会 — the constitutional GATES (ADR-2606272200), as throwing assertions +

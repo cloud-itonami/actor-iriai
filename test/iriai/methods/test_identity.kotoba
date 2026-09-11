@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — self-did:key identity tests (keygen / did:key / present-only sign+verify).
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_identity.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_identity.cljc
 (ns iriai.methods.test-identity
   (:require [iriai.methods.identity :as id]
             [kotoba.lang.text :as str]

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — physical-simulation DIGITAL TWIN (degradation + operating-margin), clj-native.
 (ns iriai.methods.twin
   "iriai 入会 — the physical-simulation DIGITAL TWIN (ADR-2606280900).

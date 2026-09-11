@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — management (管理) / governance tests (1 SBT=1 vote, :intent-only, no-server-key).
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_manage.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_manage.cljc
 (ns iriai.methods.test-manage
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.fund :as fund]

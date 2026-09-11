@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — DRY-RUN self-publication membrane (social posts). ADR-2606272355 + 2606272200.
 (ns iriai.methods.social
   "social.cljc — iriai 入会 DRY-RUN self-publication projection (ADR-2606272355,

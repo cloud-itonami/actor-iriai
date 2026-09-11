@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — constitutional gate tests (the charter inversions, structurally enforced).
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_gates.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_gates.cljc
 (ns iriai.methods.test-gates
   (:require [kotoba.lang.text] [iriai.methods.iriai-edn :as ie]
             [iriai.methods.infra :as infra]

@@ -119,7 +119,7 @@
 
  :actor/tests
  {:runner "babashka"
-  :cmd "clojure -M -m iriai.test-runner"
+  :cmd "kbb -M -m iriai.test-runner"
   :suites ["src/iriai/methods/test_infra.cljc" "src/iriai/methods/test_fund.cljc" "src/iriai/methods/test_manage.cljc"
            "src/iriai/methods/test_twin.cljc" "src/iriai/methods/test_maintain.cljc"
            "src/iriai/methods/test_gates.cljc" "src/iriai/methods/test_kotoba.cljc" "src/iriai/methods/test_autorun.cljc"]

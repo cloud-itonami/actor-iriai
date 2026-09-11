@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — seed loader + classifier (clj-native, pure stdlib).
 (ns iriai.methods.iriai-edn
   "iriai 入会 — load + classify the lifeline-commons seed substrate.

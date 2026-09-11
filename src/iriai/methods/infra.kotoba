@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — the lifeline-commons INFRA gate (System-of-Systems, clj-native, pure stdlib).
 (ns iriai.methods.infra
   "iriai 入会 — the lifeline-commons INFRA layer (ADR-2606272200).

@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — live-engine bridge tests (offline: allowlist, dry-run, exactly-once cursor, provenance).
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_kotoba_bridge.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_kotoba_bridge.cljc
 (ns iriai.methods.test-kotoba-bridge
   (:require [iriai.methods.kotoba :as k]
             [iriai.methods.kotoba-bridge :as br]

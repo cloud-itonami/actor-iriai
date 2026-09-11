@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — fleet heartbeat cell. ADR-2606280900 (fleet residency).
 (ns iriai.cell
   "iriai 入会 — `fire` runs ONE deterministic, idempotent-by-content commons beat

@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — predictive-maintenance forecast tests.
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_forecast.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_forecast.cljc
 (ns iriai.methods.test-forecast
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.forecast :as fc]

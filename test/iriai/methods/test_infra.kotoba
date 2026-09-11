@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — infra (SoS coverage/resilience) gate tests.
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_infra.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_infra.cljc
 (ns iriai.methods.test-infra
   (:require [iriai.methods.iriai-edn :as ie]
             [iriai.methods.infra :as infra]

@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; iriai 入会 — commons-ledger (content-addressed commit-DAG) tests.
-;; Run:  bb --classpath 20-actors src/iriai/methods/test_kotoba.cljc
+;; Run:  kbb --classpath 20-actors src/iriai/methods/test_kotoba.cljc
 (ns iriai.methods.test-kotoba
   (:require [kotoba.lang.text] [iriai.methods.kotoba :as k]
             [clojure.test :refer [deftest is run-tests]]
