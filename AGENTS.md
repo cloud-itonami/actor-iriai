@@ -1,4 +1,4 @@
-# cloud-itonami/actor-iriai — CLAUDE.md
+# cloud-itonami/actor-iriai — AGENTS.md
 
 Canonical repository: `https://github.com/cloud-itonami/actor-iriai`.
 The former `etzhayyim/com-etzhayyim-iriai` path is a compatibility redirect.

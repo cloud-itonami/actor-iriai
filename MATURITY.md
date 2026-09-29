@@ -18,7 +18,7 @@
 - [x] seed loader — `methods/iriai_edn.cljc`
 - [x] tests — 13 suites, **79 tests / 512 assertions green** (bb)
 - [x] runner — `run_tests.clj` (bb-native, no shell, ADR-2606072802)
-- [x] docs — README.md + CLAUDE.md + this MATURITY.md
+- [x] docs — README.md + AGENTS.md + this MATURITY.md
 - [x] ADRs — `2606272200` (commons) + `2606280900` (twin + maintenance + road)
 - [x] gitignore — `data/persisted/` (generated ledger never committed)
 
