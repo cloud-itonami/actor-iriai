@@ -5,7 +5,7 @@
 ;;   kbb 20-actors/iriai/deploy/install.cljk uninstall   ; unload + remove
 ;;   kbb 20-actors/iriai/deploy/install.cljk status       ; show launchctl state + last beat
 ;;
-;; Per the repo rule (root CLAUDE.md §"Operational code = clj/bb"): residence is a launchd
+;; Per the repo rule (root AGENTS.md §"Operational code = clj/bb"): residence is a launchd
 ;; LaunchAgent (OS config), invoking the `bb` cell task hourly at :44 — NOT a nohup bash loop.
 ;; The generated plist + logs are MACHINE-LOCAL (gitignored); only this installer + the
 ;; template are committed. No-server-key: the cell depends on the LOCAL seed + bb only.
